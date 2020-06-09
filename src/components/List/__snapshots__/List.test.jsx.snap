@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component renders List 1`] = `
+<section>
+  <p>
+    <Link
+      to="detail/husky"
+    >
+      husky
+    </Link>
+  </p>
+</section>
+`;
