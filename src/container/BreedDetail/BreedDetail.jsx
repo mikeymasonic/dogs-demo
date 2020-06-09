@@ -4,17 +4,21 @@ import { fetchDetail } from '../../services/dogsAPI';
 import { useParams } from 'react-router-dom';
 
 const BreedDetail = () => {
-  const [breed, setBreed] = useState({});
+  const [breed, setBreed] = useState([]);
   let { breedName } = useParams();
 
   useEffect(() => {
     fetchDetail(breedName)
-      .then(breed => setBreed(breed));
+      .then(apiBreeds => setBreed(apiBreeds));
   }, []);
+
+  const breedListNodes = breed.map(breeds => {
+    return <Details key={breeds} breed={breeds} />;
+  });
 
   return (
     <>
-      <Details {...breed} />
+      {breedListNodes}
     </>
   );
 };

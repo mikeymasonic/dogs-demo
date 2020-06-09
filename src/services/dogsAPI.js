@@ -1,12 +1,13 @@
 export const fetchList = () => {
   return fetch('https://dog.ceo/api/breeds/list/all')
     .then(res => res.json())
-    .then(json=> json.message)
-    .then(json=> Object.keys(json));
+    .then(json => json.message)
+    .then(json => Object.keys(json));
 };
 
-export const fetchDetail = (breed) => {
-  return fetch(`https://dog.ceo/api/breed/${breed}/images`)
+export const fetchDetail = (breedName) => {
+  return fetch(`https://dog.ceo/api/breed/${breedName}/images`)
     .then(res => res.json())
     .then(json => (json.message));
+  // .then(json => console.log(json));
 };

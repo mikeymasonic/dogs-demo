@@ -9,7 +9,7 @@ const List = ({ breed }) => (
 );
 
 List.propTypes = {
-  breed: PropTypes.string,
+  breed: PropTypes.string.isRequired,
 };
 
 export default List;

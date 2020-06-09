@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Details = ({ image }) => (
+const Details = ({ breed }) => (
   <>
-    {image && <img src={image} />}
+    {/* {breed && <img src={breed} />} */}
+    <img src={breed} />
   </>
 );
 
 Details.propTypes = {
-  image: PropTypes.string
+  breed: PropTypes.string
 };
 
 export default Details;
