@@ -5,6 +5,7 @@ const Header = () => (
   <>
     <h1>Dogs!</h1>
     <Link to="/" >Home</Link>
+    
   </>
 );
 
