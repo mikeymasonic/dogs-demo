@@ -1,6 +1,17 @@
 import React from 'react';
+import { 
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import BreedList from '../../container/BreedList/BreedList';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={BreedList} />
+      </Switch>
+    </Router>
+  );
 }
-  

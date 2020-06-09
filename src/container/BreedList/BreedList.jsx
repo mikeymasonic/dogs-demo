@@ -7,11 +7,11 @@ const BreedList = () => {
 
   useEffect(() => {
     fetchList()
-      .then(apiBreeds => setBreeds(apiBreeds));
+      .then(apiBreeds => setBreeds(apiBreeds));   
   }, []);
 
   const breedNodes = breeds.map(breed => {
-    return <List key={breed.name} {...breed} />;
+    return <List key={breed} breed={breed} />;
   });
   
   return (
