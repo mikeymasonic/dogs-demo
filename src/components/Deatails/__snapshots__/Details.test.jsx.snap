@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Details component renders Details 1`] = `
-<Fragment>
-  <img
-    src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg"
-  />
-</Fragment>
-`;
