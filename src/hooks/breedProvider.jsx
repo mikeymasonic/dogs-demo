@@ -9,10 +9,13 @@ export const BreedProvider = ({ children }) => {
   const [filteredBreeds, setFilteredBreeds] = useState([]);
   const [searchText, setSearchText] = useState('');
   const [breedDetail, setBreedDetail] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetchList()
-      .then(apiBreeds => setBreeds(apiBreeds));
+      .then(apiBreeds => setBreeds(apiBreeds))
+      .finally(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -21,7 +24,9 @@ export const BreedProvider = ({ children }) => {
 
   useEffect(() => {
     const searchResults = breeds.filter(breed => breed.includes(searchText));
+    setLoading(true);
     setFilteredBreeds(searchResults.slice(0, 12));
+    setLoading(false);
   }, [searchText]);
 
   // useEffect(() => {
@@ -34,12 +39,14 @@ export const BreedProvider = ({ children }) => {
   };
 
   const handleDetail = (breeds) => {
+    setLoading(true);
     fetchDetail(breeds)
-      .then(apiBreeds => setBreedDetail(apiBreeds));
+      .then(apiBreeds => setBreedDetail(apiBreeds))
+      .finally(() => setLoading(false));
   };
 
   return (
-    <BreedContext.Provider value={{ breeds, filteredBreeds, searchText, breedDetail, handleChange, handleDetail }}>
+    <BreedContext.Provider value={{ breeds, filteredBreeds, searchText, breedDetail, handleChange, handleDetail, loading }}>
       {children}
     </BreedContext.Provider>
   );
@@ -77,4 +84,9 @@ export const useHandleChange = () =>{
 export const useHandleDetail = () =>{
   const { handleDetail } = useContext(BreedContext);
   return handleDetail;
+};
+
+export const useLoading = () =>{
+  const { loading } = useContext(BreedContext);
+  return loading;
 };
