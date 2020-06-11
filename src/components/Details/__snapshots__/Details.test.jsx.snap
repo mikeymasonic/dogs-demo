@@ -2,6 +2,18 @@
 
 exports[`Details component renders Details 1`] = `
 <Fragment>
-  <img />
+  <div
+    style={
+      Object {
+        "height": 300,
+        "width": 300,
+      }
+    }
+  >
+    <b
+      alt="not found"
+      objectFit="contain"
+    />
+  </div>
 </Fragment>
 `;

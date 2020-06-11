@@ -1,0 +1,9 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 15rem;
+    height: 2rem;
+  }
+}
