@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`List component renders List 1`] = `
+exports[`List component it should mock the context 1`] = `
 <section>
   <p>
-    <Link
-      to="detail/husky"
+    <button
+      onClick={[Function]}
     >
-      husky
-    </Link>
+      <h1 />
+    </button>
   </p>
 </section>
 `;

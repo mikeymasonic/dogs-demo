@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header component renders Header 1`] = `
+exports[`Header component it should mock the context and render Header 1`] = `
 <Fragment>
   <h1>
     Dogs!
@@ -10,5 +10,11 @@ exports[`Header component renders Header 1`] = `
   >
     Home
   </Link>
+  <input
+    onChange="husky"
+    placeholder="Search"
+    type="text"
+    value="husky"
+  />
 </Fragment>
 `;

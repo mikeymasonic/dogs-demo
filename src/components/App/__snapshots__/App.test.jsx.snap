@@ -2,13 +2,10 @@
 
 exports[`App component renders App 1`] = `
 <BrowserRouter>
-  <Header />
-  <Switch>
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/"
-    />
-  </Switch>
+  <BreedProvider>
+    <Header />
+    <BreedList />
+    <BreedDetail />
+  </BreedProvider>
 </BrowserRouter>
 `;

@@ -8,13 +8,13 @@ const List = ({ breed }) => {
 
   return (
     <section>
-      <p><button onClick={() => handleDetail(breed)}>{breed}</button></p>
+      <p><button onClick={() => handleDetail(breed)}><h1>{breed}</h1></button></p>
     </section>
   );
 };
 
 List.propTypes = {
-  breed: PropTypes.string.isRequired,
+  breed: PropTypes.string,
 };
 
 export default List;

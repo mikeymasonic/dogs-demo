@@ -90,3 +90,5 @@ export const useLoading = () =>{
   const { loading } = useContext(BreedContext);
   return loading;
 };
+
+export default BreedContext;
