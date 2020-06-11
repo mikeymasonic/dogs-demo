@@ -2,6 +2,27 @@
   display: flex;
   justify-content: space-between;
 
+  a {
+    text-decoration: none;
+    margin-top: -1rem;
+  }
+  
+  a:link {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: hotpink;
+  }
+  
+  a:active {
+    color: hotpink;
+  }
+
   input {
     width: 15rem;
     height: 2rem;
