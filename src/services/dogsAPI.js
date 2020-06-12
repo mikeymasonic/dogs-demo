@@ -9,5 +9,4 @@ export const fetchDetail = (breedName) => {
   return fetch(`https://dog.ceo/api/breed/${breedName}/images`)
     .then(res => res.json())
     .then(json => (json.message));
-  // .then(json => console.log(json));
 };

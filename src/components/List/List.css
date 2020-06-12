@@ -15,9 +15,9 @@
     margin: .5rem;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     border: dotted .1vw rgb(197, 197, 197);
     background-color: purple;
+    cursor: pointer;
   }
 
   label:hover {
