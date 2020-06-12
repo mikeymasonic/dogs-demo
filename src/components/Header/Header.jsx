@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useSearchText, useHandleChange } from '../../hooks/breedProvider';
 import styles from './Header.css';
 
@@ -7,10 +6,13 @@ const Header = () => {
 
   const searchText = useSearchText();
   const handleChange = useHandleChange();
+  const refreshPage = () => { 
+    window.location.reload(); 
+  };
   
   return (
     <section className={styles.Header}>
-      <Link to="/" ><h1>Dogs!</h1></Link>
+      <h1 onClick={refreshPage}>Dogs!</h1>
       <input type="text" placeholder="Search" value={searchText} onChange={handleChange} />
     </section>
   );

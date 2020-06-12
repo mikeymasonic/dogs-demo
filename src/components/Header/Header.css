@@ -2,29 +2,21 @@
   display: flex;
   justify-content: space-between;
 
-  a {
+  h1 {
     text-decoration: none;
-    margin-top: -1rem;
+    margin-top: -.15rem;
+    cursor: pointer;
+
   }
   
-  a:link {
-    color: black;
-  }
-  
-  a:visited {
-    color: black;
-  }
-  
-  a:hover {
-    color: hotpink;
-  }
-  
-  a:active {
+  h1:hover {
     color: hotpink;
   }
 
   input {
     width: 15rem;
     height: 2rem;
+    margin-top: -.25rem;
+
   }
 }

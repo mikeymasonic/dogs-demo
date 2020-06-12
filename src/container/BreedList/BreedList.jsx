@@ -1,12 +1,14 @@
 import React from 'react';
 import List from '../../components/List/List';
 import { useFilteredBreeds, useLoading, useSearchText } from '../../hooks/breedProvider';
-import styles from './BreedList';
+import styles from './BreedList.css';
 
 const BreedList = () => {
   const filteredBreeds = useFilteredBreeds();
   const breedNodes = filteredBreeds.map(breed => {
-    return <List className ={styles.BreedList} key={breed} breed={breed} />;
+    return <List 
+      key={breed} 
+      breed={breed} />;
   });
 
   const loading = useLoading();
@@ -25,11 +27,9 @@ const BreedList = () => {
   );
   
   return (
-
-    <section style={{ backgroundColor: 'red', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }} className={styles.listThing}>
+    <section className={styles.listThing}>
       {breedNodes}
     </section>
-
   );
 };
 

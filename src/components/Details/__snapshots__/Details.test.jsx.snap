@@ -3,17 +3,14 @@
 exports[`Details component renders Details 1`] = `
 <Fragment>
   <div
-    style={
-      Object {
-        "height": 300,
-        "width": 300,
-      }
-    }
+    className="imageGrid"
   >
-    <b
-      alt="not found"
-      objectFit="contain"
+    <img
+      onLoad={[Function]}
     />
+    <h2>
+      loading image...
+    </h2>
   </div>
 </Fragment>
 `;

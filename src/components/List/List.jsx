@@ -8,7 +8,16 @@ const List = ({ breed }) => {
 
   return (
     <section className={styles.List}>
-      <p><button onClick={() => handleDetail(breed)}><h1>{breed}</h1></button></p>
+      <input
+        type="radio" 
+        value={breed} 
+        name="dogs" 
+        id={breed} 
+        onClick={() => handleDetail(breed)} />
+      <label 
+        htmlFor={breed}>
+        {breed}
+      </label>
     </section>
   );
 };
@@ -18,3 +27,21 @@ List.propTypes = {
 };
 
 export default List;
+
+{/* <div>
+  <input type="radio" id="huey" name="drone" value="huey"
+         checked>
+  <label for="huey">Huey</label>
+</div>
+
+<div>
+  <input type="radio" id="dewey" name="drone" value="dewey">
+  <label for="dewey">Dewey</label>
+</div>
+
+<div>
+  <input type="radio" id="louie" name="drone" value="louie">
+  <label for="louie">Louie</label>
+</div> */}
+
+{/* <label htmlFor={breed}>{breed}</label> */}

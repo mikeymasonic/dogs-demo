@@ -29,11 +29,6 @@ export const BreedProvider = ({ children }) => {
     setLoading(false);
   }, [searchText]);
 
-  // useEffect(() => {
-  //   fetchDetail()
-  //     .then(apiBreeds => setBreedDetail(apiBreeds));
-  // }, []);
-
   const handleChange = ({ target }) => {
     setSearchText(target.value);
   };

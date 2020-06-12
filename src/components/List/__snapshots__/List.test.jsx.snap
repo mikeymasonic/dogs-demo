@@ -1,13 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List component it should mock the context and render List 1`] = `
-<section>
-  <p>
-    <button
-      onClick={[Function]}
-    >
-      <h1 />
-    </button>
-  </p>
+<section
+  className="List"
+>
+  <input
+    name="dogs"
+    onClick={[Function]}
+    type="radio"
+  />
+  <label />
 </section>
 `;
