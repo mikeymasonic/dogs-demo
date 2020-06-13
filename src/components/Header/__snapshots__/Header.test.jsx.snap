@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component it should mock the context and render Header 1`] = `
+<section
+  className="Header"
+>
+  <h1
+    onClick={[Function]}
+  >
+    Dogs!
+  </h1>
+  <input
+    onChange="husky"
+    placeholder="Search"
+    type="text"
+    value="husky"
+  />
+</section>
+`;
